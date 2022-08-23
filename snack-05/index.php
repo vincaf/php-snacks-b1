@@ -19,58 +19,45 @@
             [
                 "name" => "Mario",
                 "lastName" => "Rossi",
-                "vote" => 5,
+                "votes" => [5, 4, 6, 8]
             ],
             [
                 "name" => "Gianni",
                 "lastName" => "Verdi",
-                "vote" => 9,
+                "votes" => [8, 7, 6, 8]
             ],
             [
                 "name" => "Giuseppe",
                 "lastName" => "Blu",
-                "vote" => 6,
+                "votes" => [8, 6, 6, 7]
             ],
             [
                 "name" => "Salvatore",
                 "lastName" => "Esposito",
-                "vote" => 7,
+                "votes" => [7, 8, 9, 8]
             ],
             [
                 "name" => "Michele",
                 "lastName" => "Bruno",
-                "vote" => 2,
+                "votes" => [8, 4, 6, 6]
             ],
             [
                 "name" => "Francesco",
                 "lastName" => "Paoli",
-                "vote" => 4,
+                "votes" => [2, 4, 5, 3]
             ],
         ];
-
-        $sumVote = 0;
-        
-        for($i=0; $i < count($students); $i++) { 
-            $sumVote = $sumVote + $students[$i]['vote'];
-        }
-
-        $averageVote = $sumVote / count($students);
-
-        var_dump($students);
-        var_dump($sumVote);
-        var_dump($averageVote);
     ?>
 
     <?php for ($i=0; $i < count($students); $i++) { ?>
         <p>
             <?php 
-                echo $students[$i]['name'] . ' ' . $students[$i]['lastName'] . ' - voto ' . $students[$i]['vote']
+                $averageVote = intval(array_sum($students[$i]['votes']) / count($students[$i]['votes']));
+
+                echo $students[$i]['name'] . ' ' . $students[$i]['lastName'] . ' - media voti: ' . $averageVote;
             ?>
         </p>
     <?php } ?>
-    
-    <h4>
-        Media voto: <?php echo $averageVote ?>
-    </h4>
+
 </body>
 </html>
