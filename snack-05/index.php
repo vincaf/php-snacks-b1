@@ -55,10 +55,22 @@
         }
 
         $averageVote = $sumVote / count($students);
+
         var_dump($students);
         var_dump($sumVote);
         var_dump($averageVote);
-
     ?>
+
+    <?php for ($i=0; $i < count($students); $i++) { ?>
+        <p>
+            <?php 
+                echo $students[$i]['name'] . ' ' . $students[$i]['lastName'] . ' - voto ' . $students[$i]['vote']
+            ?>
+        </p>
+    <?php } ?>
+    
+    <h4>
+        Media voto: <?php echo $averageVote ?>
+    </h4>
 </body>
 </html>
