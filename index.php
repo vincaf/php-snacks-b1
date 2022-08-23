@@ -12,6 +12,36 @@
     <title>Basket Match</title>
 </head>
 <body>
-    
+    <h1>BASKET MATCH</h1>
+    <h3>Giornata 1</h3>
+
+    <?php 
+        $match = [
+            [
+                "teamHome" => "Olimpia Milano",
+                "teamAway" => "Cantù",
+                "pointsHome" => 55,
+                "pointsAway" => 60,
+            ],
+            [
+                "teamHome" => "Virtus Bologna",
+                "teamAway" => "Reyer Venezia Mestre",
+                "pointsHome" => 75,
+                "pointsAway" => 20,
+            ],
+            [
+                "teamHome" => "Victoria Libertas",
+                "teamAway" => "New Basket Brindisi",
+                "pointsHome" => 54,
+                "pointsAway" => 87,
+            ],
+            [
+                "teamHome" => "De Longhi Treviso",
+                "teamAway" => "Fortitudo Bologna",
+                "pointsHome" => 34,
+                "pointsAway" => 58,
+            ],
+        ]
+    ?>
 </body>
 </html>
