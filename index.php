@@ -16,7 +16,7 @@
     <h3>Giornata 1</h3>
 
     <?php 
-        $match = [
+        $matches = [
             [
                 "teamHome" => "Olimpia Milano",
                 "teamAway" => "Cantù",
@@ -41,7 +41,15 @@
                 "pointsHome" => 34,
                 "pointsAway" => 58,
             ],
-        ]
+        ];
     ?>
+
+    <?php for ($i=0; $i < count($matches); $i++) { ?>
+        <h4>
+            <?php 
+                echo $matches[$i]['teamHome'] . ' - ' . $matches[$i]['teamAway']. ' - ' . $matches[$i]['pointsHome']. '-' . $matches[$i]['pointsAway'];
+            ?>
+        </h4>
+    <?php } ?>
 </body>
 </html>
