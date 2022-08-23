@@ -29,8 +29,15 @@
 
     var_dump($paragraph);
     var_dump($splitparagraph);
-
     ?>
+
+    <?php for ($i=0; $i < count($splitparagraph); $i++) { ?>
+        <p>
+            <?php 
+                echo $splitparagraph[$i];
+            ?>
+        </p>
+    <?php } ?>
     
 </body>
 </html>
