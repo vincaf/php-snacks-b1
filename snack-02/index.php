@@ -11,21 +11,14 @@
     <title>GET Parameters</title>
 </head>
 <body>
+    <h1>Form</h1>
 
-    <?php 
-        $name = $_GET['name'];
-        $mail = $_GET['mail'];
-        $age = $_GET['age'];
+    <form action="welcome.php" method="post">
+        <input type="text" name="name" placeholder="Inserisci il nome">
+        <input type="email" name="email" placeholder="Inserisci la mail">
+        <input type="number" name="age" placeholder="Inserisci l'età">
 
-        if ( (strlen($name) > 3) 
-            && (strpos($mail, '@') > 0 && strpos($mail, '.') > 3)  
-            && (is_numeric($age))
-        ) {
-            echo "Accesso riuscito";
-        } else {
-            echo "Accesso negato";
-        }
-    ?>
-
+        <button type="submit">Send</button>
+    </form>
 </body>
 </html>
